@@ -6,10 +6,10 @@ import { Basket } from "./index.js";
 //? Adds Item to Basket
 // Arrange
 
-const bagel1 = new Bagel(1);
+const bagel1 = new Bagel("plain");
 const myBasket = new Basket();
 
-let expected = [Bagel];
+let expected = [new Bagel("plain")];
 let actual, result;
 
 // Act
