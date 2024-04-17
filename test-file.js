@@ -2,8 +2,8 @@ import { assertEquals } from "./test-framework.js";
 import { addToBasket } from "./index.js";
 //? Adds Item to Basket
 // Arrange
-let bagel = "plain";
-let expected = "plain";
+const bagel = {};
+let expected = bagel;
 let actual, result;
 
 // Act
