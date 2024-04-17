@@ -1,9 +1,13 @@
-export function Basket(contents) {
-    this.contents = [];
+export class Basket {
+    constructor(contents) {
+        this.contents = [];
+    }
 };
 
-export function Bagel(id) {
-    this.ID = id
+export class Bagel {
+    constructor(id) {
+        this.ID = id;
+    }
 };
 
 export const addToBasket = (toAdd, addTo) => {
