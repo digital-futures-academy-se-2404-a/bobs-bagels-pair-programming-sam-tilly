@@ -1,4 +1,5 @@
 import { assertEquals } from "./test-framework.js";
+import { addToBasket } from "./index.js";
 //? Adds Item to Basket
 // Arrange
 let item = "bagel";
