@@ -1,7 +1,9 @@
 const basket = {
     basketContents: [],
     addItem(item) {
-        this.basketContents.push(item)
+        if (item !== null) {
+        this.basketContents.push(item) 
+        }
     }
 }
 
