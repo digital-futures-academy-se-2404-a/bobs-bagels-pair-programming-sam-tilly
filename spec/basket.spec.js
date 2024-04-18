@@ -66,3 +66,32 @@ console.log(result ? `Pass` : `Fail`);
 //Clear Up
 clearUp();
 console.log(`==================`);
+
+//? TEST 3
+//* Verify that can add to a basket with existing items
+
+console.log(`Test 3`);
+console.log(`==================`);
+console.log(
+    `Verify that can add to a basket with existing items`
+);
+
+// Arrange
+let originalItem = {};
+basket.basketContents.push(originalItem);
+expected = basket.basketContents.length + 1;
+
+// Act
+basket.basketContents.push(testItem);
+actual = basket.basketContents.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+// Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+
+// Clean Up
+clearUp();
+
