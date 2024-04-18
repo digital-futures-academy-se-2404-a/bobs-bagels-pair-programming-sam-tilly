@@ -1,1 +1,0 @@
-export const addToBasket = (bagel, basket) => basket.push(bagel);  
