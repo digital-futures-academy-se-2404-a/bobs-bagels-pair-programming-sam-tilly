@@ -1,7 +1,7 @@
 import { assertEquals } from "./test-framework/test-framework.js"
 import Basket from "../src/basket-class.js"
 
-
+//Adding in a test comment
 
 //? TEST 1
 //* Add item to basket using addItem and expect that length of basket.contents has increased by 1
