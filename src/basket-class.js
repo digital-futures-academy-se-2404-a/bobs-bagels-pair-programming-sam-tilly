@@ -1,10 +1,10 @@
 class Basket {
-    basketContents = [];
+    #basketContents = [];
 
-    getBasketContents = () => this.basketContents;
+    getBasketContents = () => this.#basketContents;
 
     addItem = (item) => {
-        this.basketContents.push(item);
+        this.#basketContents.push(item);
     }
 
 }
