@@ -1,5 +1,7 @@
-import { assertEquals } from "../spec/test-framework/test-framework.js"
-import basket from "../src/basket.js"
+import { assertEquals } from "./test-framework/test-framework.js"
+import Basket from "../src/basket-class.js"
+
+
 
 //? TEST 1
 //* Add item to basket using addItem and expect that length of basket.contents has increased by 1
@@ -15,9 +17,7 @@ const clearUp = () => {
     actual = undefined;
     result = undefined;
     testItem = {};
-    basket.basketContents = [];
 }
-
 
 // Arrange
 let expected = basket.basketContents.length + 1;
@@ -66,6 +66,7 @@ console.log(result ? `Pass` : `Fail`);
 //Clear Up
 clearUp();
 console.log(`==================`);
+
 
 //? TEST 3
 //* Verify that can add to a basket with existing items
