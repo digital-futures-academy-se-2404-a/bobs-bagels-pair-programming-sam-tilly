@@ -7,3 +7,5 @@ export default class Item {
 
     getName = () => this.#name;
 }
+
+// Hello hello 
