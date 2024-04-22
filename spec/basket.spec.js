@@ -23,11 +23,11 @@ const clearUp = () => {
 let actual, result;
 let basket = new Basket();
 let testItem = new Item("Plain Bagel");
-let expected = basket.getBasketContents.length + 1;
+let expected = basket.getBasketContents().length + 1;
 
 // Act
 basket.addItem(testItem);
-actual = basket.getBasketContents.length;
+actual = basket.getBasketContents().length;
 
 // Assert
 result = assertEquals(actual, expected);
