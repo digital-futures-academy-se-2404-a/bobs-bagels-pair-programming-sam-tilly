@@ -1,5 +1,5 @@
 import { assertEquals } from "./test-framework/test-framework.js"
-import basket from "../src/basket.js"
+import Basket from "../src/basket-class.js"
 import Item from "../src/item-class.js"
 
 //? TEST 1
@@ -16,16 +16,18 @@ const clearUp = () => {
     actual = undefined;
     result = undefined;
     testItem = undefined;
+    basket = undefined;
 }
 
 // Arrange
-let expected = basket.basketContents.length + 1;
 let actual, result;
+let basket = new Basket();
 let testItem = new Item("Plain Bagel");
+let expected = basket.getBasketContents.length + 1;
 
 // Act
 basket.addItem(testItem);
-actual = basket.basketContents.length;
+actual = basket.getBasketContents.length;
 
 // Assert
 result = assertEquals(actual, expected);
@@ -49,6 +51,7 @@ console.log(
 );
 
 //Arrange
+basket = new Basket();
 testItem = new Item("Plain Bagel");
 expected = true;
 
@@ -78,6 +81,7 @@ console.log(
 );
 
 // Arrange
+basket = new Basket();
 testItem = new Item("Plain Bagel");
 let originalItem = new Item("Cream Cheese Bagel");
 basket.basketContents.push(originalItem);
@@ -108,6 +112,7 @@ console.log(
 );
 
 // Arrange
+basket = new Basket();
 testItem = null;
 expected = basket.basketContents.length;
 
